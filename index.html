@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryptor</title>
+    <link rel="icon" href="content/img/Logo.png">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <Main>
+        <section class="principal-content principal-content__user-interaction">
+            <img class="principal-content__icon" src="content/img/Logo.png" alt="">
+            <div class="user-interaction">
+                <textarea name="" class="user-interaction__input" placeholder="Enter text here"></textarea>
+                <div class="user-interaction__warning">
+                    <p class="user-interaction__warning__text"><p class="user-interaction__warning__icon">!</p>Lowercase letters only and no accents</p>
+                </div>
+                <button class="user-interaction__button user-interaction__button--blue">Encrypt</button>
+                <button class="user-interaction__button user-interaction__button--grey">Decrypt</button>
+            </div>
+        </section>
+        <section class="principal-content principal-content__user-result">
+            <div class="user-result">
+                <img class="user-result__img" src="content/img/Muñeco.png" alt="">
+                <h2 class="user-result__tittle">No message was found</h2>
+                <p class="user-result__p">Enter the text you want to encrypt or decrypt.</p>
+                <button class="user-interaction__button user-result__button--grey" hidden>Copy</button>
+            </div>
+        </section>
+    </Main>
+</body>
+</html>
