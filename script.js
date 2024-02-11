@@ -1,4 +1,5 @@
 let cadena;
+const regex = /[A-ZÁÉÍÓÚÜÑáéíóúü]/;
 
 function encrypt() {
 
@@ -25,7 +26,7 @@ function encrypt() {
 
 
     var cadenaEncriptada = caracteres.join('');
-    if (/[^a-z]/.test(cadena)) {
+    if (regex.test(cadena)) {
         var warningText = document.getElementById("warningText");
 
         warningText.classList.add("warning-animation");
@@ -58,7 +59,7 @@ function decrypt() {
         }
     }
 
-    if (/[^a-z]/.test(cadenaEncriptada)) {
+    if (regex.test(cadenaEncriptada)) {
         var warningText = document.getElementById("warningText");
 
         warningText.classList.add("warning-animation");
