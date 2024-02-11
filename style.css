@@ -76,12 +76,20 @@ html{
     width: 13px;
 }
 
+.warning-animation {
+    color: red !important; /* Color rojo durante la animación */
+    transform: translateY(-5px); /* Salto hacia arriba */
+}
+
 .user-interaction__button{
     border-radius: 35px;
     height: 50px;
     width: 275px;
     font-family: sans-serif;
     margin: 3vh 0.5vh 0.5vh 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
 .user-interaction__button--blue{
@@ -93,6 +101,24 @@ html{
     background-color: #d8dfe8;
     color:#0a3871;
     border: solid 1px #0a3871;
+}
+
+.user-interaction__button--grey:hover {
+    background-color: #a1a7b1; 
+    color: #ffffff;
+}
+
+.user-interaction__button--grey:active {
+    background-color: #828894; 
+    border: solid 1px #222d41; 
+}
+
+.user-interaction__button--blue:hover {
+    background-color: #2980b9;
+}
+
+.user-interaction__button--blue:active {
+    background-color: #1f618d;
 }
 
 .principal-content__user-result {
@@ -122,6 +148,22 @@ html{
     margin-top: 3vh;
 }
 
+.user-result__output{
+    width: 90%;
+    height: 70%;
+    justify-content: start;
+    align-self: center;
+    margin:2rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    resize: none;
+    color: #65747D;
+    font-size: 2vw;
+}
+
 .user-result__tittle{
     font-weight: bold;
     font-family: sans-serif;
@@ -145,7 +187,31 @@ html{
     background-color: #d8dfe8;
     color:#0a3871;
     border: solid 1px #0a3871;
-    margin-bottom: -8.3vh;
+    justify-self: end;
+    align-self: center;
+    margin: 1rem;
+}
+
+.user-result__button--grey:hover {
+    background-color: #a1a7b1; 
+    color: #ffffff;
+}
+
+.user-result__button--grey:active {
+    background-color: #828894; 
+    border: solid 1px #222d41; 
+}
+
+.copy-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
 }
 
 @media screen and (max-width: 1160px){
@@ -209,6 +275,11 @@ html{
         height: 30vh;
     }
 
+    .user-result__output{
+        font-size: 3vw;
+        margin: 0;
+    }
+
     .user-result__img{
         width: 0;
     }
@@ -221,5 +292,9 @@ html{
     .user-result__p{
         font-size: 4vw;
         max-width: 70%;
+    }
+
+    .user-result__button--grey{
+        margin-right: 3rem;
     }
 }
